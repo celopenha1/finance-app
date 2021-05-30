@@ -4,5 +4,3 @@ import App from "./App"
 import "./App.css"
 
 ReactDom.render(<App />, document.getElementById('app'))
-
-console.log('oi')

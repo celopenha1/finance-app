@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+table{
+  display: block;
+  height: 400px;
+  overflow-y: scroll;
+  border-radius: 10px;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+  border-top: 1px solid rgb(16, 163, 16);
+  border-bottom: 1px solid rgb(16, 163, 16);
+}
+/*  HEAD STYLE */
+table thead tr{
+  font-family: 'Quicksand', sans-serif;
+
+  background-color: rgb(16, 163, 16);
+  color: white;
+  font-weight: bold;
+
+}
+/* COMMON STYLES FOR TH AND TD */
+table thead tr th,
+table tbody tr td{
+  padding: 16px 15px;
+  font-family: 'Roboto', sans-serif;
+}
+table thead{
+
+}
+table tbody{
+
+
+}
+
+
+table tbody tr{
+  color: #1b2421dd;
+  border-bottom: 1px solid #dddddddd;
+}
+table tbody tr:nth-of-type(even){
+  background-color: #F3F3F3;
+}
+
+
+
+
+
+
+
+/* scrollbar  */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: none;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  border-radius: 6px;
+
+  background: rgba(11, 124, 54, 0.596);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
