@@ -30,16 +30,16 @@ const Container = (props) => {
       title,
       value
     }
-
-    fetch("https://fnance-app.herokuapp.com/transaction", {
+    // "https://fnance-app.herokuapp.com/transaction"
+    fetch("http://localhost:3001/transaction", {
       method: "POST",
       headers: {
         'Content-type': 'application/json; charset=UTF-8'
       },
       body: JSON.stringify(data)
-    }).then(response => { console.log(response); if (response.ok) { setTeste(true) } return response.json(); })
+    }).then(response => { if (response.ok) { document.querySelector('button').textContent = "ENVIADO COM SUCESSO" } return response.json() })
       .then(data => console.log(data))
-      .catch(error => console.log(error));
+      .catch(error => { document.querySelector('button').style.background = "red"; document.querySelector('button').textContent = "NÃO FOI POSSÍVEL SALVAR"; console.log(error) });
 
   }
 

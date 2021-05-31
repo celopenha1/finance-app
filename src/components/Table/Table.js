@@ -9,7 +9,9 @@ const Table = (props) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    fetch("https://fnance-app.herokuapp.com/transaction")
+    // https://fnance-app.herokuapp.com/transaction
+
+    fetch("http://localhost:3001/transaction")
       .then(res => res.json())
       .then(result => { setIsLoaded(true); setItems(result) })
       .catch(error => { setIsLoaded(false); setError(error) });
@@ -35,8 +37,8 @@ const Table = (props) => {
             return (
               <tr >
                 <td>{item.id}</td>
-                <td>{item.relevant}</td>
-                <td>{item.create_at}c MARCELO</td>
+                <td>{item.title}</td>
+                <td>{item.date}</td>
                 <td><strong>R$ </strong>{item.value}</td>
               </tr>
             )

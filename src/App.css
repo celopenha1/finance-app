@@ -90,6 +90,6 @@ button{
 
 button:hover{
   cursor: pointer;
-  background-color: rgb(16, 163, 16);
+  background-color: rgb(70, 44, 221);
   transition: all .5s;
 }
