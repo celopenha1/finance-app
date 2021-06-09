@@ -2,6 +2,9 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
+
+  entry: ['babel-polyfill', './src/index.js'],
+
   // Where files should be sent once they are bundled
   output: {
     path: path.join(__dirname, '/dist'),
@@ -28,5 +31,5 @@ module.exports = {
       }
     ]
   },
-  plugins: [new HtmlWebpackPlugin({ template: './index.html' })],
+  plugins: [new HtmlWebpackPlugin({ template: './index.html' }), ]
 }
