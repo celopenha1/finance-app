@@ -9,9 +9,8 @@ const Table = (props) => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // https://fnance-app.herokuapp.com/transaction
 
-    fetch("http://localhost:3001/transaction")
+    fetch("https://fnance-app.herokuapp.com/transaction")
       .then(res => res.json())
       .then(result => { setIsLoaded(true); setItems(result) })
       .catch(error => { setIsLoaded(false); setError(error) });
